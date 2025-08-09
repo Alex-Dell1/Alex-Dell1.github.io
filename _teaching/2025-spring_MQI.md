@@ -1,9 +1,9 @@
 ---
-title: "Teaching experience 1"
+title: "Mathematics of Quantum Information Theory"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
+permalink: /teaching/2025-spring-MQIT
+venue: "Nagoya University, Department"
 date: 2014-01-01
 location: "City, Country"
 ---
