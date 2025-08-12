@@ -25,9 +25,9 @@ author:
   avatar           : "profile.jpeg"
   name             : "Alex Della Schiava"
   pronouns         : # example: "she/her"  
-  bio              : "PhD student in Quantum Computation"
+  bio              : "Short biography for the left-hand sidebar"
   location         : "Nagoya, Japan"
-  employer         : "Nagoya University"
+  employer         : "Graduate School of Mathematics, Nagoya University"
   uri              : # URL
   email            : "dellaschiavaalex@gmail.com" 
 
@@ -37,7 +37,7 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=atheZI4AAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            :
+  orcid            : 
   semantic         : # URL
   pubmed           : 
   researchgate     : # URL
@@ -57,7 +57,7 @@ author:
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
-  goodreads        : fresc1 # Username
+  goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
   instagram        : # Username
