@@ -27,7 +27,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "PhD student in Quantum Computation"
   location         : "Nagoya, Japan"
-  employer         : "Graduate School of Mathematics, Nagoya University"
+  employer         : "Nagoya University"
   uri              : # URL
   email            : "dellaschiavaalex@gmail.com" 
 
@@ -37,9 +37,9 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=atheZI4AAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            :
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : 
   researchgate     : # URL
   scopus           : # URL
 
@@ -57,7 +57,7 @@ author:
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
-  goodreads        : # Username
+  goodreads        : fresc1 # Username
   google_plus      : # Username
   keybase          : # Username
   instagram        : # Username
