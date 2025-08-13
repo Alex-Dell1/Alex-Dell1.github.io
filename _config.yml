@@ -25,9 +25,9 @@ author:
   avatar           : "profile.jpeg"
   name             : "Alex Della Schiava"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "PhD student"
   location         : "Nagoya, Japan"
-  employer         : "Graduate School of Mathematics, Nagoya University"
+  employer         : "Nagoya University"
   uri              : # URL
   email            : "dellaschiavaalex@gmail.com" 
 
