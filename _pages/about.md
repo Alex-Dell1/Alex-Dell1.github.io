@@ -19,7 +19,7 @@ Research interests
 
 I am broadly interested in the theoretical underpinnings of theoretical computer science, with focus on
 
-- Quantum computational complexity;
-- Quantum algorithms.
+- <span style="color: #00FFD5;">Quantum computational complexity</span>;
+- <span style="color: #00FFD5;">Quantum algorithms</span>.
 
-Throughout my master's degree I also developed interest (and affection) towards logic programming. Check my [GitHub](https://github.com/Alex-Dell1) for more details!
+Throughout my studies I also developed interest and affection towards <span style="color: #00FFD5;">logic programming</span>. Check my [GitHub](https://github.com/Alex-Dell1) for more details!

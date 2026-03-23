@@ -6,4 +6,5 @@ permalink: /teaching/2025-spring-teaching
 venue: "Nagoya University, Graduate School of Mathematics"
 date: 2025-04-01
 location: "Nagoya, Japan"
+paperurl: "https://sites.google.com/site/khomologyzone/teaching/sml-spring-2025"
 ---
