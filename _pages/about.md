@@ -16,8 +16,8 @@ Hello! My name is Alex, I am a second year **PhD student at Nagoya University** 
 
 Studies aside, I managed to keep myself busy:
 
-- **Researcher** @ [BLACK](https://www.black-sat.org/en/stable/) \| University of Udine, Department of Mathematics, Computer Science and Physics 🇮🇹 (2024);
-- **Research Fellowship** \| University of Udine, Department of Economics and Statistics 🇮🇹 (2023-2024);
+- **Researcher** @ [BLACK](https://www.black-sat.org/en/stable/) \| University of Udine 🇮🇹 (2024);
+- **Research Fellowship** \| University of Udine 🇮🇹 (2023-2024);
 - Part-time Dev \| [Edith Group](https://beta80group.it/en/beta80-edith-group) 🇮🇹 (2020-2021).
 
 Research interests
