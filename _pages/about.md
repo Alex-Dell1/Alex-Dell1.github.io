@@ -18,7 +18,7 @@ Studies aside, I managed to keep myself busy:
 
 - **Researcher** @ [BLACK](https://www.black-sat.org/en/stable/) \| University of Udine 🇮🇹 (2024);
 - **Research Fellowship** \| University of Udine 🇮🇹 (2023-2024);
-- Part-time Dev \| [Edith Group](https://beta80group.it/en/beta80-edith-group) 🇮🇹 (2020-2021).
+- **Part-time software developer** \| [Edith Group](https://beta80group.it/en/beta80-edith-group) 🇮🇹 (2020-2021).
 
 Research interests
 ======
@@ -28,4 +28,4 @@ I am broadly interested in the theoretical underpinnings of theoretical computer
 - Quantum computational complexity;
 - Quantum algorithms.
 
-Throughout my studies I also developed interest and affection towards <span style="color: #00FFD5;">logic programming</span>. Check my [GitHub](https://github.com/Alex-Dell1) for more details!
+Throughout my studies I also developed affection towards <span style="color: #00FFD5;">logic programming</span>. Check [GitHub](https://github.com/Alex-Dell1) for more details!
