@@ -28,4 +28,4 @@ I am broadly interested in the theoretical underpinnings of theoretical computer
 - Quantum computational complexity;
 - Quantum algorithms.
 
-Throughout my studies I also developed affection towards <span style="color: #00FFD5;">logic programming</span>. Check [GitHub](https://github.com/Alex-Dell1) for more details!
+Throughout my studies I also developed affection towards logic programming. Check [GitHub](https://github.com/Alex-Dell1) for more details!
