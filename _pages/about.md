@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: "Alex Della Schiava"
 author_profile: true
 redirect_from: 
   - /about/
