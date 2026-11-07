@@ -18,6 +18,37 @@
       { "label": "GitHub", "url": "https://github.com/Alex-Dell1" }
     ]
   },
+  "about": {
+    "intro": [
+      "Hello! My name is Alex Della Schiava (Alex is my first name, and Della Schiava is my family name). I was born in ",
+      { "text": "Friuli", "url": "https://en.wikipedia.org/wiki/Friuli" },
+      ". Friuli is a small region in northeast Italy to which, although I left two years ago, I am very deeply attached. More specifically, I grew up in ",
+      { "text": "Tarvisio", "url": "https://en.wikipedia.org/wiki/Tarvisio" },
+      ", a town of about 5,000 people near the meeting point of Italy, Austria, and Slovenia."
+    ],
+    "sports": [
+      "Outside my research, I enjoy watching and playing sports. Since I was a kid, I’ve supported ",
+      { "text": "Udinese", "url": "https://en.wikipedia.org/wiki/Udinese_Calcio" },
+      "\u00a0",
+      { "emoji": "⚪⚫" },
+      ", my favourite football team and an important part of Friulian culture. As far as practicing is concerned, I am a para swimmer in the S9 class! I’ve had the chance to compete (and get demolished) at national championships in both Italy and Japan."
+    ],
+    "languageIntro": [
+      "Another thing I enjoy is learning languages. Studying Japanese\u00a0",
+      { "emoji": "🇯🇵" },
+      " has been an important part of my life over the past two years, and I am still taking lessons. I can also hold a conversation in:"
+    ],
+    "languages": [
+      { "name": "Italian", "flag": "🇮🇹", "aside": "(well, at least I hope so!)" },
+      { "name": "English", "flag": "🇬🇧" },
+      { "name": "German", "flag": "🇩🇪" }
+    ],
+    "languageNote": [
+      "I studied Portuguese\u00a0",
+      { "emoji": "🇵🇹" },
+      " during my Erasmus exchange in Coimbra, but my level is rather embarrassing for an Italian speaker."
+    ]
+  },
   "recentNewsCount": 3,
   "news": [
     {

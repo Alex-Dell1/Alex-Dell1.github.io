@@ -41,6 +41,19 @@ const profiles = profile.links.map(link => `<a href="${href(link.url)}">${escape
 const portrait = './alex-della-schiava.png';
 const styles = readFileSync(new URL('styles.css', dir), 'utf8');
 const favicon = 'data:image/svg+xml;base64,' + readFileSync(new URL('favicon.svg', dir)).toString('base64');
+function siteHeader(isAbout = false) {
+  const homePath = isAbout ? './index.html' : '';
+  return `<header class="site-header"><div class="frame header-inner"><a class="signature" href="${isAbout ? './index.html' : '#top'}" aria-label="${isAbout ? 'Home' : 'Back to top'}">${mark}<span>${escape(profile.shortName)}</span></a>
+<nav aria-label="Main navigation"><a href="${homePath}#news">News</a><a href="${homePath}#publications">Publications</a><a href="${homePath}#background">Background</a><a href="./about.html"${isAbout ? ' aria-current="page"' : ''}>About me</a></nav></div></header>`;
+}
+const footer = `<footer class="frame"><span>${escape(profile.name)}</span><a href="${href('mailto:' + profile.email)}">${escape(profile.email)} ${arrow}</a><a class="toplink" href="#top">Back to top ↑</a></footer>`;
+function inlineText(parts) {
+  return parts.map(part => {
+    if (typeof part === 'string') return escape(part);
+    if (part.emoji) return `<span class="emoji" aria-hidden="true">${escape(part.emoji)}</span>`;
+    return `<a href="${href(part.url)}">${escape(part.text)}</a>`;
+  }).join('');
+}
 const home = `<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -49,8 +62,7 @@ const home = `<!doctype html>
 <meta name="description" content="${escape(profile.name)} is a ${escape(profile.role)} at ${escape(profile.affiliation)}. Research in ${escape(profile.keywords.join(', '))}.">
 <link rel="icon" href="${favicon}" type="image/svg+xml"><style>${styles}</style>
 </head><body id="top"><a class="skip" href="#main">Skip to content</a>
-<header class="site-header"><div class="frame header-inner"><a class="signature" href="#top" aria-label="Back to top">${mark}<span>${escape(profile.shortName)}</span></a>
-<nav aria-label="Main navigation"><a href="#news">News</a><a href="#publications">Publications</a><a href="#background">Background</a></nav></div></header>
+${siteHeader()}
 <main id="main" class="frame">
 <section class="hero" aria-labelledby="name"><div class="intro">
 <p class="field"><span></span>${escape(profile.field)}</p>
@@ -70,6 +82,26 @@ ${news.length > count ? `<details class="archive"><summary><span class="closed">
 <ol class="rows">${[...content.publications].sort((a,b) => b.year - a.year).map(publication).join('')}</ol></section>
 <section class="section" id="background" aria-labelledby="bg-title"><div id="bg-title">${sectionHeading('03', 'Background')}</div>
 <div class="background"><div><h3>Education</h3><ul>${background(content.education)}</ul></div><div><h3>Experience</h3><ul>${background(content.experience)}</ul></div></div></section></main>
-<footer class="frame"><span>${escape(profile.name)}</span><a href="${href('mailto:' + profile.email)}">${escape(profile.email)} ${arrow}</a><a class="toplink" href="#top">Back to top ↑</a></footer>
+${footer}
+</body></html>`;
+const about = `<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#faf9f6">
+<title>About me · ${escape(profile.name)}</title>
+<meta name="description" content="Get to know ${escape(profile.name)}: roots in Friuli, para swimming, football, and learning languages.">
+<link rel="icon" href="${favicon}" type="image/svg+xml"><style>${styles}</style>
+</head><body id="top"><a class="skip" href="#main">Skip to content</a>
+${siteHeader(true)}
+<main id="main" class="frame about-page"><article class="about-copy" aria-labelledby="about-title">
+<h1 id="about-title">About me</h1>
+<p>${inlineText(content.about.intro)}</p>
+<p>${inlineText(content.about.sports)}</p>
+<p>${inlineText(content.about.languageIntro)}</p>
+<ul class="about-languages" role="list">${content.about.languages.map(language => `<li><span class="emoji" aria-hidden="true">${escape(language.flag)}</span><span>${escape(language.name)}${language.aside ? ` ${escape(language.aside)}` : ''}</span></li>`).join('')}</ul>
+<p>${inlineText(content.about.languageNote)}</p>
+</article></main>
+${footer}
 </body></html>`;
 writeFileSync(new URL('index.html', dir), home);
+writeFileSync(new URL('about.html', dir), about);

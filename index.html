@@ -30,7 +30,8 @@ a svg { width: .78em; height: .78em; display: inline-block; vertical-align: .02e
 .signature { gap: 12px; font: 21px var(--serif); letter-spacing: -.65px; }
 .signature .mark { width: 32px; height: 32px; color: var(--blue); }
 nav { gap: 31px; }
-nav a { font-size: 14px; color: #43474b; padding-block: 10px; }
+nav a { font-size: 14px; color: #43474b; padding-block: 10px; white-space: nowrap; }
+nav a[aria-current="page"] { color: var(--blue); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 nav a:hover, .links a:not(.email):hover, footer a:hover, .rows h3 a:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 222px; align-items: center; column-gap: clamp(38px, 6vw, 88px); padding-block: 66px 60px; }
 h1, h2, h3, h4, p, figure { margin: 0; }
@@ -90,6 +91,17 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
 .background h4 { font-size: 15px; font-weight: 600; margin: 2px 0; }
 .background p { font-size: 14px; line-height: 1.5; color: var(--secondary); }
 .background .place { color: var(--ink); }
+.about-page { min-height: calc(100vh - 160px); }
+.about-copy { max-width: 760px; padding-block: 48px 64px; }
+.about-copy h1 { margin: 0 0 32px; }
+.about-copy p { color: #44494e; font-size: 17px; line-height: 1.8; }
+.about-copy p + p { margin-top: 24px; }
+.about-copy a { color: var(--blue); text-decoration: underline; text-decoration-color: #9faccc; text-underline-offset: 3px; }
+.about-copy a:hover { text-decoration-color: var(--blue); }
+.about-languages { margin: 16px 0 24px; padding-inline-start: 1.4em; list-style: disc outside; }
+.about-languages li { font-size: 17px; padding-block: 3px; }
+.about-languages .emoji { margin-inline-end: 10px; }
+.emoji { font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif; white-space: nowrap; }
 footer { display: flex; border-top: 1px solid var(--line); gap: 20px; align-items: center; padding-block: 22px 30px; font-size: 12px; color: var(--secondary); }
 footer > span { font: 17px var(--serif); color: var(--ink); }
 .toplink { margin-left: auto; }
@@ -102,15 +114,16 @@ footer > span { font: 17px var(--serif); color: var(--ink); }
 }
 @media (max-width: 650px) {
  .frame { width: calc(100% - 40px); }
- .header-inner { min-height: 60px; gap: 10px; }
+ .header-inner { min-height: 60px; gap: 4px; flex-wrap: wrap; padding-block: 10px 4px; }
  .signature { gap: 7px; font-size: 16px; letter-spacing: -.6px; }
  .signature .mark { width: 24px; height: 24px; }
- nav { gap: 13px; }
+ nav { gap: 13px; width: 100%; justify-content: space-between; }
  nav a { font-size: 12px; }
  .hero { position: relative; display: block; padding: 35px 0 34px; }
  .field { font-size: 9px; gap: 6px; letter-spacing: 1.3px; }
  .field span { width: 14px; }
- h1 { max-width: calc(100% - 105px); font-size: clamp(40px, 8vw, 49px); margin-top: 12px; }
+ h1 { font-size: clamp(40px, 8vw, 49px); }
+ .hero h1 { max-width: calc(100% - 105px); margin-top: 12px; }
  .byline { max-width: calc(100% - 110px); font-size: 17px; }
  .byline span { margin-inline: 1px; }
  .portrait { width: 90px; position: absolute; right: 0; top: 39px; }
@@ -128,6 +141,9 @@ footer > span { font: 17px var(--serif); color: var(--ink); }
  .rows h3 { font-size: 21px; }
  .news-meta time, .year { font-size: 11px; }
  .background { grid-template-columns: 1fr; gap: 26px; }
+ .about-copy { padding-block: 32px 40px; }
+ .about-copy h1 { margin-bottom: 24px; }
+ .about-copy p, .about-languages li { font-size: 16px; }
  footer { flex-wrap: wrap; gap: 5px 10px; padding-block: 17px; }
  footer > span { flex-basis: 100%; }
 }
@@ -140,7 +156,7 @@ footer > span { font: 17px var(--serif); color: var(--ink); }
 </style>
 </head><body id="top"><a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="frame header-inner"><a class="signature" href="#top" aria-label="Back to top"><svg class="mark" viewBox="0 0 36 36" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.25"><ellipse cx="18" cy="18" rx="17" ry="6.1" transform="rotate(-40 18 18)"/><ellipse cx="18" cy="18" rx="17" ry="6.1" transform="rotate(40 18 18)"/><circle cx="18" cy="18" r="2" fill="currentColor"/></g></svg><span>Alex D.S.</span></a>
-<nav aria-label="Main navigation"><a href="#news">News</a><a href="#publications">Publications</a><a href="#background">Background</a></nav></div></header>
+<nav aria-label="Main navigation"><a href="#news">News</a><a href="#publications">Publications</a><a href="#background">Background</a><a href="./about.html">About me</a></nav></div></header>
 <main id="main" class="frame">
 <section class="hero" aria-labelledby="name"><div class="intro">
 <p class="field"><span></span>Quantum information</p>
