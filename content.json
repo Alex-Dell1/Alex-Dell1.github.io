@@ -1,0 +1,110 @@
+{
+  "profile": {
+    "name": "Alex Della Schiava",
+    "shortName": "Alex D.S.",
+    "field": "Quantum information",
+    "role": "PhD candidate",
+    "affiliation": "Nagoya University",
+    "location": "Nagoya, Japan",
+    "supervision": "I’m a doctoral student at Nagoya University’s Graduate School of Mathematics, advised by",
+    "supervisor": { "label": "François Le Gall", "url": "https://www.francoislegall.com/" },
+    "internship": "Alongside my PhD, I’m spending October through December 2026 as a research intern at",
+    "employer": { "label": "QunaSys", "url": "https://qunasys.com/en/" },
+    "keywords": ["quantum algorithms", "quantum information", "theoretical computer science"],
+    "email": "dellaschiavaalex@gmail.com",
+    "links": [
+      { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=atheZI4AAAAJ&hl=en" },
+      { "label": "researchmap", "url": "https://researchmap.jp/alexds" },
+      { "label": "GitHub", "url": "https://github.com/Alex-Dell1" }
+    ]
+  },
+  "recentNewsCount": 3,
+  "news": [
+    {
+      "date": "2026-10-20",
+      "type": "Internship",
+      "title": "Internship at QunaSys",
+      "detail": "I’ve joined QunaSys as a research intern. My internship runs through 31 December 2026.",
+      "url": "https://qunasys.com/en/"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "Preprint",
+      "title": "QMA(2) with Limited Shared Entanglement",
+      "detail": "New preprint with Ranitha Mataraarachchi on how shared EPR pairs affect two-prover quantum verification.",
+      "url": "https://arxiv.org/abs/2609.39668"
+    },
+    {
+      "date": "2026-09-09",
+      "type": "Poster",
+      "title": "Q-LEAP–Moonshot Joint Workshop",
+      "detail": "Poster session at the University of Osaka.",
+      "url": "https://www.ftqcapplication.qiqb.osaka-u.ac.jp/events/"
+    },
+    {
+      "date": "2026-05-28",
+      "type": "Talk",
+      "title": "Separable quantum proofs in distributed verification",
+      "detail": "Oral presentation at the 54th Quantum Information Technology Symposium (QIT54) in Ise, Japan.",
+      "url": "https://ken.ieice.org/ken/program/index.php?lang=eng&tgs_regid=38f0f7c3c2cab6190accbb0c399e37f1e261332de4f3100c97e05dc443514a3b"
+    },
+    {
+      "date": "2026-04-22",
+      "type": "Talk",
+      "title": "Separable quantum proofs in distributed verification",
+      "detail": "Nagoya–Paris Meeting at IRIF in Paris, France."
+    },
+    {
+      "date": "2026-03-30",
+      "type": "Talk",
+      "title": "Separable quantum proofs in distributed verification",
+      "detail": "Talk in Japanese at the Distributed Algorithms Workshop in Nagoya, Japan."
+    },
+    {
+      "date": "2025-12-02",
+      "type": "Poster",
+      "title": "dQMA(k): Multiple verifiers meet multiple provers",
+      "detail": "Poster at QIT53, NTT Atsugi R&D Center, Japan.",
+      "url": "https://ken.ieice.org/ken/program/index.php?lang=eng&tgs_regid=9466254dfc5c4ff33123cd85f68b0ebba3c1ac3aa4b6de34e3d872265d9ad192"
+    }
+  ],
+  "publications": [
+    {
+      "year": 2026,
+      "type": "Preprint",
+      "title": "QMA(2) with Limited Shared Entanglement",
+      "authors": ["Alex Della Schiava", "Ranitha Mataraarachchi"],
+      "venue": "arXiv:2609.39668",
+      "url": "https://arxiv.org/abs/2609.39668"
+    },
+    {
+      "year": 2024,
+      "type": "Journal article",
+      "title": "Classical computation over quantum architectures: From graph encoding to declarative languages compilation",
+      "authors": ["Alex Della Schiava", "Carla Piazza", "Riccardo Romanello"],
+      "venue": "Journal of Logic and Computation 34(8), 1526–1555",
+      "url": "https://doi.org/10.1093/logcom/exae040"
+    },
+    {
+      "year": 2023,
+      "type": "Conference paper",
+      "title": "Graph-Theoretical Arguments in Support of a Quantum Declarative Manifesto",
+      "authors": ["Alex Della Schiava", "Carla Piazza", "Riccardo Romanello"],
+      "venue": "38th Italian Conference on Computational Logic (CILC 2023)",
+      "award": "Best Student Paper Award",
+      "url": "https://ceur-ws.org/Vol-3428/paper13.pdf"
+    }
+  ],
+  "education": [
+    { "period": "2024–2027", "title": "PhD in Mathematics", "place": "Nagoya University", "detail": "In progress. Expected September 2027. Make New Standards doctoral fellowship." },
+    { "period": "2020–2023", "title": "International Double MSc", "place": "Universities of Udine and Klagenfurt", "detail": "Computer Science, AI and Cybersecurity. Graduated with 110/110 cum laude." },
+    { "period": "2016–2020", "title": "BSc in Computer Science", "place": "University of Udine", "detail": "Thesis on privacy and contextual integrity." },
+    { "period": "September 2018 – February 2019", "title": "Erasmus exchange", "place": "Polytechnic Institute of Coimbra", "detail": "Coimbra, Portugal." }
+  ],
+  "experience": [
+    { "period": "October–December 2026", "title": "Research intern", "place": "QunaSys" },
+    { "period": "2024", "title": "Research collaborator · BLACK", "place": "University of Udine", "detail": "C++ development for a linear temporal logic satisfiability checker." },
+    { "period": "2023–2024", "title": "Research fellow", "place": "University of Udine", "detail": "Statistical analysis of students’ interest in STEM subjects." },
+    { "period": "2020–2021", "title": "Part-time software engineer", "place": "Edith Group, Udine", "detail": "Python development for augmented reality and embedded IoT systems." }
+  ]
+}
