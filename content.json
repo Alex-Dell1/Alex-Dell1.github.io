@@ -52,6 +52,11 @@
   "recentNewsCount": 3,
   "news": [
     {
+      "date": "2026-11-10",
+      "type": "Preprint",
+      "url": "https://arxiv.org/abs/2611.12600"
+    },
+    {
       "date": "2026-10-20",
       "type": "Internship",
       "title": "Internship at QunaSys",
@@ -61,8 +66,6 @@
     {
       "date": "2026-09-30",
       "type": "Preprint",
-      "title": "QMA(2) with Limited Shared Entanglement",
-      "detail": "New preprint with Ranitha Mataraarachchi on how shared EPR pairs affect two-prover quantum verification.",
       "url": "https://arxiv.org/abs/2609.39668"
     },
     {
@@ -100,6 +103,14 @@
     }
   ],
   "publications": [
+    {
+      "year": 2026,
+      "type": "Preprint",
+      "title": "Reducing Provers in Distributed Quantum Verification",
+      "authors": ["Alex Della Schiava", "Atsuya Hasegawa", "François Le Gall", "Harumichi Nishimura"],
+      "venue": "arXiv:2611.12600",
+      "url": "https://arxiv.org/abs/2611.12600"
+    },
     {
       "year": 2026,
       "type": "Preprint",

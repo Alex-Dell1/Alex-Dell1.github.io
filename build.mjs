@@ -21,15 +21,26 @@ const timeFormat = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'sh
 const news = [...content.news].sort((a, b) => b.date.localeCompare(a.date));
 const count = content.recentNewsCount;
 if (!Number.isInteger(count) || count < 1) throw new Error('recentNewsCount must be a positive integer');
+function paperDetails(item) {
+  const authors = item.authors.map(name => name === profile.name ? `<strong>${escape(name)}</strong>` : escape(name)).join(', ');
+  return `<div class="paper-details"><h3><a href="${href(item.url)}">${escape(item.title)} ${arrow}</a></h3><p>${authors}</p><p class="venue">${escape(item.venue)}</p>${item.award ? `<span class="award">${escape(item.award)}</span>` : ''}</div>`;
+}
 function newsRow(item) {
   const date = new Date(item.date + 'T00:00:00Z');
   if (date.toISOString().slice(0, 10) !== item.date) throw new Error('Invalid date: ' + item.date);
-  const title = item.url ? `<a href="${href(item.url)}">${escape(item.title)} ${arrow}</a>` : escape(item.title);
-  return `<li class="news-row"><div class="news-meta"><time datetime="${escape(item.date)}">${timeFormat.format(date)}</time><span class="type">${escape(item.type)}</span></div><div><h3>${title}</h3><p>${escape(item.detail)}</p></div></li>`;
+  let details;
+  if (item.type === 'Preprint') {
+    const paper = content.publications.find(paper => paper.url === item.url);
+    if (!paper) throw new Error(`Preprint news entry dated ${item.date} has no matching paper in publications for URL: ${item.url}`);
+    details = paperDetails(paper);
+  } else {
+    const title = item.url ? `<a href="${href(item.url)}">${escape(item.title)} ${arrow}</a>` : escape(item.title);
+    details = `<div><h3>${title}</h3><p>${escape(item.detail)}</p></div>`;
+  }
+  return `<li class="news-row"><div class="news-meta"><time datetime="${escape(item.date)}">${timeFormat.format(date)}</time><span class="type">${escape(item.type)}</span></div>${details}</li>`;
 }
 function publication(item) {
-  const authors = item.authors.map(name => name === profile.name ? `<strong>${escape(name)}</strong>` : escape(name)).join(', ');
-  return `<li class="pub-row"><div class="pub-meta"><span class="year">${escape(item.year)}</span><span class="type">${escape(item.type)}</span></div><div><h3><a href="${href(item.url)}">${escape(item.title)} ${arrow}</a></h3><p>${authors}</p><p class="venue">${escape(item.venue)}</p>${item.award ? `<span class="award">${escape(item.award)}</span>` : ''}</div></li>`;
+  return `<li class="pub-row"><div class="pub-meta"><span class="year">${escape(item.year)}</span><span class="type">${escape(item.type)}</span></div>${paperDetails(item)}</li>`;
 }
 function background(items) {
   return items.map(item => `<li><span class="period">${escape(item.period)}</span><h4>${escape(item.title)}</h4><p class="place">${escape(item.place)}</p>${item.detail ? `<p>${escape(item.detail)}</p>` : ''}</li>`).join('');
@@ -44,7 +55,7 @@ const favicon = 'data:image/svg+xml;base64,' + readFileSync(new URL('favicon.svg
 function siteHeader(isAbout = false) {
   const homePath = isAbout ? './index.html' : '';
   return `<header class="site-header"><div class="frame header-inner"><a class="signature" href="${isAbout ? './index.html' : '#top'}" aria-label="${isAbout ? 'Home' : 'Back to top'}">${mark}<span>${escape(profile.shortName)}</span></a>
-<nav aria-label="Main navigation"><a href="${homePath}#news">News</a><a href="${homePath}#publications">Publications</a><a href="${homePath}#background">Background</a><a href="./about.html"${isAbout ? ' aria-current="page"' : ''}>About me</a></nav></div></header>`;
+<nav aria-label="Main navigation"><a href="${homePath}#news">News</a><a href="${homePath}#publications">Papers</a><a href="${homePath}#background">Background</a><a href="./about.html"${isAbout ? ' aria-current="page"' : ''}>About me</a></nav></div></header>`;
 }
 const footer = `<footer class="frame"><span>${escape(profile.name)}</span><a href="${href('mailto:' + profile.email)}">${escape(profile.email)} ${arrow}</a><a class="toplink" href="#top">Back to top ↑</a></footer>`;
 function inlineText(parts) {
@@ -78,7 +89,7 @@ ${siteHeader()}
 <section class="section" id="news" aria-labelledby="news-title"><div id="news-title">${sectionHeading('01', 'Recent news')}</div>
 <ol class="rows">${news.slice(0, count).map(newsRow).join('')}</ol>
 ${news.length > count ? `<details class="archive"><summary><span class="closed">Show older news</span><span class="opened">Hide older news</span><span class="count">(${news.length - count})</span><span class="chevron"></span></summary><ol class="rows">${news.slice(count).map(newsRow).join('')}</ol></details>` : ''}</section>
-<section class="section" id="publications" aria-labelledby="pub-title"><div id="pub-title">${sectionHeading('02', 'Publications &amp; preprints')}</div>
+<section class="section" id="publications" aria-labelledby="pub-title"><div id="pub-title">${sectionHeading('02', 'Papers')}</div>
 <ol class="rows">${[...content.publications].sort((a,b) => b.year - a.year).map(publication).join('')}</ol></section>
 <section class="section" id="background" aria-labelledby="bg-title"><div id="bg-title">${sectionHeading('03', 'Background')}</div>
 <div class="background"><div><h3>Education</h3><ul>${background(content.education)}</ul></div><div><h3>Experience</h3><ul>${background(content.experience)}</ul></div></div></section></main>
