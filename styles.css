@@ -38,7 +38,7 @@ h1 { font: 400 clamp(48px, 5.5vw, 74px)/1.07 var(--serif); letter-spacing: -.062
 .bio { font-size: 16px; line-height: 1.65; max-width: 610px; color: #44494e; }
 .bio { margin-top: 21px; }
 .bio p + p { margin-top: 8px; }
-.bio a { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: #9faccc; text-underline-offset: 3px; }
+.bio a, .background a { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: #9faccc; text-underline-offset: 3px; }
 .keywords { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 17px; font: 11px/1.6 var(--mono); color: var(--blue); }
 .keywords li { padding: 4px 9px; border: 1px solid #d3dbe9; border-radius: 3px; background: #f0f2f6; max-width: 100%; }
 .links { display: flex; align-items: center; flex-wrap: wrap; gap: 11px 21px; margin-top: 24px; font-size: 13px; }

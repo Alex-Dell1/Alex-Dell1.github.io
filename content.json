@@ -139,7 +139,14 @@
   ],
   "education": [
     { "period": "2024–2027", "title": "PhD in Mathematics", "place": "Nagoya University", "detail": "In progress. Expected September 2027. Make New Standards doctoral fellowship." },
-    { "period": "2020–2023", "title": "International Double MSc", "place": "Universities of Udine and Klagenfurt", "detail": "Computer Science, AI and Cybersecurity. Graduated with 110/110 cum laude." },
+    {
+      "period": "2020–2023",
+      "title": "International double MSc in Computer Science",
+      "place": "Universities of Udine and Klagenfurt",
+      "thesis": "Graph Encoding in Quantum Computing",
+      "advisor": { "label": "Prof. Carla Piazza", "url": "https://users.dimi.uniud.it/~carla.piazza/" },
+      "detail": "Graduated with full marks and honors (110/110 cum laude)"
+    },
     { "period": "2016–2020", "title": "BSc in Computer Science", "place": "University of Udine", "detail": "Thesis on privacy and contextual integrity." },
     { "period": "September 2018 – February 2019", "title": "Erasmus exchange", "place": "Polytechnic Institute of Coimbra", "detail": "Coimbra, Portugal." }
   ],

@@ -43,7 +43,7 @@ function publication(item) {
   return `<li class="pub-row"><div class="pub-meta"><span class="year">${escape(item.year)}</span><span class="type">${escape(item.type)}</span></div>${paperDetails(item)}</li>`;
 }
 function background(items) {
-  return items.map(item => `<li><span class="period">${escape(item.period)}</span><h4>${escape(item.title)}</h4><p class="place">${escape(item.place)}</p>${item.detail ? `<p>${escape(item.detail)}</p>` : ''}</li>`).join('');
+  return items.map(item => `<li><span class="period">${escape(item.period)}</span><h4>${escape(item.title)}</h4><p class="place">${escape(item.place)}</p>${item.thesis ? `<p>Thesis: ${escape(item.thesis)}</p>` : ''}${item.advisor ? `<p>Advisor: <a href="${href(item.advisor.url)}">${escape(item.advisor.label)}</a></p>` : ''}${item.detail ? `<p>${escape(item.detail)}</p>` : ''}</li>`).join('');
 }
 function sectionHeading(num, title) {
   return `<div class="section-heading"><span aria-hidden="true" class="section-number">/${num}</span><h2>${title}</h2></div>`;
